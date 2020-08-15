@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{630FA405-EFF8-4816-9C4C-E5F7BAA7977F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeasurementUnitsManagement.Models", "MeasurementUnitsManagement.Models\MeasurementUnitsManagement.Models.csproj", "{CAEC2400-4AC2-4AF3-983C-2B55731F5D82}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CAEC2400-4AC2-4AF3-983C-2B55731F5D82} = {630FA405-EFF8-4816-9C4C-E5F7BAA7977F}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAEC2400-4AC2-4AF3-983C-2B55731F5D82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAEC2400-4AC2-4AF3-983C-2B55731F5D82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAEC2400-4AC2-4AF3-983C-2B55731F5D82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAEC2400-4AC2-4AF3-983C-2B55731F5D82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
