@@ -1,15 +1,17 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using MeasurementUnitsManagement.Models.Entities;
+using MeasurementUnitsManagement.Repository.Contracts;
 using MeasurementUnitsManagement.Repository.Implements;
 using MeasurementUnitsManagement.Services.Contracts;
 
 namespace MeasurementUnitsManagement.Services.Implements
 {
-    public class UnitFactorService : BaseService<UnitFactorModel,Repository<UnitFactorModel>>, IUnitFactorService
+    public class UnitFactorService : BaseService<UnitFactorModel,IUnitFactorRepository>, IUnitFactorService
     {
-        public UnitFactorService(Repository<UnitFactorModel> repository)
+        public UnitFactorService(IUnitFactorRepository repository)
             : base(repository)
         {
         }
@@ -17,7 +19,7 @@ namespace MeasurementUnitsManagement.Services.Implements
         public async Task<List<UnitFactorModel>> GetUnitList(CancellationToken cancellationToken)
         {
 
-            return await Repository.GetList(cancellationToken) as List<UnitFactorModel>;
+            return (await Repository.GetList(cancellationToken)).ToList();
         }
 
         public async Task<UnitFactorModel> GetUnit(int id, CancellationToken cancellationToken)

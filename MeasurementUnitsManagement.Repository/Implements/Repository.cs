@@ -13,6 +13,7 @@ namespace MeasurementUnitsManagement.Repository.Implements
         // Inject DbContext and UnitOfWork
         // Implement Repository CRUD
         
+        
         public async Task<IEnumerable<TEntity>> GetList(CancellationToken cancellationToken)
         {
             return new List<TEntity>();

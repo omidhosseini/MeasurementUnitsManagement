@@ -20,6 +20,7 @@ namespace MeasurementUnitConsoleApp
 
             IServiceCollection services = new ServiceCollection();
 
+            services.AddScoped<IRepository<UnitFactorModel>, Repository<UnitFactorModel>>(); 
             services.AddScoped<IRepository<UnitFactorModel>, Repository<UnitFactorModel>>();
             
             services.AddScoped<IUnitFactorRepository, UnitFactorRepository>();
@@ -27,16 +28,15 @@ namespace MeasurementUnitConsoleApp
 
             services.AddScoped<IUnitConverter, UnitConverter>();
 
-            using (var sp = services.BuildServiceProvider())
-            {
-                var unitFactorService = sp.GetService<IUnitConverter>();
+            using var sp = services.BuildServiceProvider();
+            
+            var unitFactorService = sp.GetService<IUnitConverter>();
 
 
-                var res = unitFactorService.ConvertLength
-                    (LengthEnum.km, LengthEnum.cm, 100, CancellationToken.None).Result;
+            var res = unitFactorService.ConvertLength
+                (LengthEnum.km, LengthEnum.cm, 1, CancellationToken.None).Result;
 
-                Console.WriteLine("Converted number : ", res);
-            }
+            Console.WriteLine("Converted number : ", res);
         }
     }
 }
