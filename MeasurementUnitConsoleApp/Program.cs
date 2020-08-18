@@ -37,6 +37,8 @@ namespace MeasurementUnitConsoleApp
                 (LengthEnum.km, LengthEnum.cm, 1, CancellationToken.None).Result;
 
             Console.WriteLine("Converted number : ", res);
+
+            Console.ReadLine();
         }
     }
 }
