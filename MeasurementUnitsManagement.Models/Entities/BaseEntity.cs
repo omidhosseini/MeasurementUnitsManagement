@@ -1,7 +1,11 @@
 namespace MeasurementUnitsManagement.Models.Entities
 {
-    public class BaseEntity<T>
+    
+    public class BaseEntity 
     {
-        public T Id { get; set; }
+        public object Id { get; set; }
     }
+
+    
+    
 }

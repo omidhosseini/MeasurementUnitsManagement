@@ -10,4 +10,8 @@
       <PackageReference Include="Microsoft.Extensions.FileProviders.Abstractions" Version="3.1.7" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Extensions" />
+    </ItemGroup>
+
 </Project>
