@@ -37,12 +37,9 @@ namespace MeasurementUnitsManagement.Services.Utils
                 return value;
 
 
-            if (fromFactor > toFactor)
-            {
-                return (value * fromFactor) / toFactor;
-            }
-
-            return (value * fromFactor) * toFactor;
+           
+            return (value * fromFactor) / toFactor;
+           
         }
     }
 }
