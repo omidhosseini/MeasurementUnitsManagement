@@ -14,7 +14,7 @@ namespace MeasurementUnitConsoleApp
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             Console.WriteLine("Hello World!");
 
@@ -33,8 +33,8 @@ namespace MeasurementUnitConsoleApp
             var unitFactorService = sp.GetService<IUnitConverter>();
 
 
-            var res = unitFactorService.ConvertLength
-                (LengthEnum.km, LengthEnum.cm, 1, CancellationToken.None).Result;
+            var res = await unitFactorService.ConvertLength
+                (LengthEnum.km, LengthEnum.cm, 1, CancellationToken.None);
 
             Console.WriteLine("Converted number : ", res);
 
