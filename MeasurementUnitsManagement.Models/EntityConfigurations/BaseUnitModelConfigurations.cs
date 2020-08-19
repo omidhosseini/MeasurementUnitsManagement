@@ -18,25 +18,5 @@ namespace MeasurementUnitsManagement.Models.EntityConfigurations
                 .WithMany(x => x.BaseUnitList)
                 .HasForeignKey(x => x.MeasurementDimensionsId);
         }
-    }
-    public class FormularizedUnitModelConfigurations : IEntityTypeConfiguration<FormularizedUnitModel>
-    {
-        public void Configure(EntityTypeBuilder<FormularizedUnitModel> builder)
-        {
-            builder.ToTable("FormularizedUnit")
-                .HasKey(x => x.Id);  
-        }
-    }
-    public class UnitFactorModelConfiguration : IEntityTypeConfiguration<UnitFactorModel>
-    {
-        public void Configure(EntityTypeBuilder<UnitFactorModel> builder)
-        {
-            builder.ToTable("UnitFactor")
-                .HasKey(x => x.Id);
-
-            builder.HasOne(x => x.BaseUnitInfo)
-                .WithMany(x => x.UnitFactorList)
-                .HasForeignKey(x => x.BaseUnitId);
-        }
-    }
+    } 
 }
